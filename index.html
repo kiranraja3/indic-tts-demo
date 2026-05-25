@@ -141,17 +141,12 @@
             margin-bottom: 20px;
         }
 
-        /* CHANGED: responsive diagram wrapper — no fixed min-height on mobile */
+        /* Responsive diagram wrapper — height driven entirely by the image */
         .diagram-image-wrapper {
             width: 100%;
-            background: var(--accent-light);
-            border: 2px dashed var(--accent);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
-            min-height: 400px;
+            line-height: 0; /* collapse whitespace gap below img */
         }
 
         .diagram-image-wrapper img {
@@ -159,7 +154,6 @@
             height: auto;
             display: block;
             border-radius: 6px;
-            object-fit: contain;
         }
 
         .diagram-placeholder-text {
@@ -383,12 +377,6 @@
                 padding: 40px 0;
             }
 
-            /* CHANGED: shrink diagram height on mobile so images aren't tiny */
-            .diagram-image-wrapper {
-                min-height: 0;
-                aspect-ratio: 16 / 9;
-            }
-
             .diagram-container {
                 padding: 16px;
             }
@@ -397,10 +385,6 @@
         @media (max-width: 480px) {
             .audio-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .diagram-image-wrapper {
-                aspect-ratio: 4 / 3;
             }
         }
     </style>
@@ -761,7 +745,7 @@
                             <td class="best">—</td>
                         </tr>
                         <tr>
-                            <td>ElevenLabs (ceiling)</td>
+                            <td>ElevenLabs</td>
                             <td>—</td>
                             <td>—</td>
                             <td>—</td>
@@ -774,7 +758,7 @@
     </div>
 
     <footer>
-        <p>© 2026 • <a href="#">Paper</a> · <a href="#">GitHub</a> · Built for Algoverse submission</p>
+        <p>© 2026 • <a href="#">Paper</a> · <a href="#">GitHub</a></p>
     </footer>
 
 </body>
